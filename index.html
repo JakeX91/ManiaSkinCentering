@@ -8,43 +8,46 @@
 
 <body>
 
-    <body id="iiz3">
-        <div id="i3id" class="row">
-            <div id="izqdi" class="cell">
-                <h1 id="ix5h">osu!mania skin centering
-                </h1>
-                <div id="i4w6t">Created by JakeX91 with inspiration from RoanH's ManiaColumnCentering program<br /></div>
+    <body>
+        <div id="top" class="row">
+            <div class="cell">
+                <h1>osu!mania skin centering</h1>
+                <h3>Created by JakeX91 with inspiration from RoanH's ManiaColumnCentering program</h3><br />
             </div>
-        </div><br />
-        <h2 id="io3l">Screen Dimensions
-        </h2>
-        <p id="injjh">Put the dimensions of your osu! client here!<br /></p>
-        <h4 id="il3u">Screen Width
+        </div>
+        <br />
+        <h2>Screen Dimensions</h2>
+        <p>Put the dimensions of your osu! client here!</p>
+        <br />
+        <h4>Screen Width
             <input id="width" type="number" />
         </h4>
-        <h4 id="io8k">Screen Height
+        <h4>Screen Height
             <input id="height" type="number" />
-        </h4><br />
-        <h2 id="i481i">Column Sum
-        </h2>
-        <p id="iuko7">For this next part, open up your skin&#039;s skin.ini file and look for the &quot;ColumnWidth&quot; for your desired keymode.</p>
+        </h4>
         <br />
-        <h3 id="ie5dl">Method 1: Calculate using Product</h3>
-        <p id="iqmb3">Use this method if your skin has the same width for each column.</p>
-        <h4 id="ixk5k">Number of Keys
+        <h2>Column Sum</h2>
+        <p>For this next part, open up your skin's skin.ini file and look for the ColumnWidth for your desired key mode.</p>
+        <br />
+        <h3>Method 1: Calculate using Product</h3>
+        <p>Use this method if your skin has the same width for each column.</p>
+        <h4>Number of Keys
             <input id="keys" type="number" />
         </h4>
-        <h4 id="i4j8f">ColumnWidth
+        <h4>ColumnWidth
             <input id="columnwidth" type="number" />
-        </h4><br />
-        <h3 id="izjo6">Method 2: Calculate using Sum</h3>
-        <p id="iwq0g">Use this method if your skin has different widths for each column. Simply add up all of the widths and put the sum in the sum textbox.</p>
-        <h4 id="isppf">Sum of ColumnWidth
+        </h4>
+        <br />
+        <h3>Method 2: Calculate using Sum</h3>
+        <p>Use this method if your skin has different widths for each column. Simply add up all of the widths and put the sum in the sum textbox.</p>
+        <h4>Sum of ColumnWidth
             <input id="sum" type="number" />
-        </h4><br />
-        <div id="ieuc3"><button type="button" onclick="CalcUsingProduct()">Calculate using Method 1</button> <button type="button" onclick="CalcUsingSum()">Calculate using Method 2</button></div><br />
+        </h4>
+        <br />
+        <div><button type="button" onclick="CalcUsingProduct()">Calculate using Method 1</button> <button type="button" onclick="CalcUsingSum()">Calculate using Method 2</button></div>
+        <br />
         <h2 id="columnstart">ColumnStart:</h2>
-        <p id="iqmb3">Replace the ColumnStart value in your skin.ini to the one shown here!</p>
+        <p>Replace the ColumnStart value in your skin.ini to the one shown here!</p>
     </body>
 </body>
 <script>
