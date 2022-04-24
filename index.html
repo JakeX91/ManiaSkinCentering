@@ -1,7 +1,42 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>test</h1>
-<p>test</p>
-</body>
-</html>
+<h1 style="text-align: center;">osu!mania skin centering</h1>
+<br>
+<h2 style="text-align: center;">Screen Dimensions</h2>
+<h4 style="text-align: center;">Screen Width <input id="width" type="number" /></h4>
+<h4 style="text-align: center;">Screen Height <input id="height" type="number" /></h4>
+<br>
+<h2 style="text-align: center;">Column Sum</h2>
+<p style="text-align: center;">For this next part, open up your skin's skin.ini file and look for the "ColumnWidth" for your desired keymode.</p>
+<br>
+<h3 style="text-align: center;">Method 1: Calculate using Product</h3>
+<p style="text-align: center;">Use this option if your skin has the same width for each column.</p>
+<h4 style="text-align: center;">Number of Keys <input id="keys" type="number" /></h4>
+<h4 style="text-align: center;">ColumnWidth <input id="columnwidth" type="number" /></h4>
+<br>
+<h3 style="text-align: center;">Method 2: Calculate using Sum</h3>
+<p style="text-align: center;">Use this option if your skin has different widths for each column. Simply add up all of the widths and put the sum in the sum textbox.</p>
+<h4 style="text-align: center;">Sum of ColumnWidth <input id="sum" type="number" /></h4>
+<br>
+<div style="text-align: center;"><button type="button" onclick="CalcUsingProduct()">Calculate using Method 1</button> <button type="button" onclick="CalcUsingSum()">Calculate using Method 2</button></div>
+<br>
+<h2 style="text-align: center;" id="columnstart">ColumnStart:</h2>
+
+<script>
+function CalcUsingProduct() {
+	var width = +document.getElementById('width').value;
+	var height = +document.getElementById('height').value;
+	var keys = +document.getElementById('keys').value;
+	var columnwidth = +document.getElementById('columnwidth').value;
+	var columnstart = Math.floor(((480/(height/width)/2)-((keys*columnwidth)/2)))
+	document.getElementById("columnstart").innerHTML = "ColumnStart: "+columnstart;
+}
+</script>
+
+<script>
+function CalcUsingSum() {
+	var width = +document.getElementById('width').value;
+	var height = +document.getElementById('height').value;
+	var sum = +document.getElementById('sum').value;
+	var columnstart = Math.floor(((480/(height/width)/2)-(sum/2)));
+	document.getElementById("columnstart").innerHTML = "ColumnStart: "+columnstart;
+}
+</script>
